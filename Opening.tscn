@@ -1,44 +1,59 @@
-[gd_scene load_steps=7 format=3 uid="uid://bx58qij4e5i87"]
+[gd_scene load_steps=10 format=3 uid="uid://bx58qij4e5i87"]
 
 [ext_resource type="Texture2D" uid="uid://bxlfgdta1dphk" path="res://Minecraft-Bricks.jpg" id="1_oiixh"]
+[ext_resource type="Texture2D" uid="uid://bfqchc85vvoy2" path="res://floor (1).png" id="2_86gsx"]
 [ext_resource type="Script" uid="uid://vj17xc4uiwu1" path="res://character_body_2d.gd" id="2_ahqxp"]
 [ext_resource type="Texture2D" uid="uid://c1thybwjbre6d" path="res://icon.svg" id="3_86gsx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hwa81"]
 texture = ExtResource("1_oiixh")
-texture_region_size = Vector2i(1500, 1500)
+texture_region_size = Vector2i(512, 512)
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r3fmk"]
+texture = ExtResource("2_86gsx")
+texture_region_size = Vector2i(512, 512)
+0:0/0 = 0
+0:1/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_r3fmk"]
-tile_size = Vector2i(1500, 1500)
+tile_size = Vector2i(512, 512)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hwa81")
+sources/1 = SubResource("TileSetAtlasSource_r3fmk")
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ahqxp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h7o3h"]
-size = Vector2(2507.5, 2403)
+size = Vector2(322.375, 313.75)
 
 [node name="Node2D" type="Node2D"]
+position = Vector2(-260, -357)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_r3fmk")
 format = 2
-layer_0/tile_data = PackedInt32Array(-196614, 0, 0, -196613, 0, 0, -196612, 0, 0, -196611, 0, 0, -131075, 0, 0, -131076, 0, 0, -131077, 0, 0, -131078, 0, 0, -65542, 0, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -131074, 0, 0, -196610, 0, 0, -6, 0, 0, -5, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -196615, 0, 0, -131079, 0, 0, -65543, 0, 0, -7, 0, 0, -8, 0, 0, -65544, 0, 0, -131080, 0, 0, -196616, 0, 0, -262145, 0, 0, -327681, 0, 0, -393216, 0, 0, -458752, 0, 0, -458751, 0, 0, -458750, 0, 0, -458749, 0, 0, -393213, 0, 0, -393212, 0, 0, -327676, 0, 0, -262139, 0, 0, -196603, 0, 0, -131067, 0, 0, -65531, 0, 0, -262138, 0, 0, -262137, 0, 0, -262136, 0, 0, -196600, 0, 0, -131064, 0, 0, -65528, 0, 0, -65529, 0, 0, -65530, 0, 0, -131066, 0, 0, -196602, 0, 0, -196601, 0, 0, -131065, 0, 0, -262140, 0, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, -196609, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0)
+layer_0/tile_data = PackedInt32Array(196602, 1, 1, 196603, 1, 1, 196604, 1, 1, 196605, 1, 1, 196606, 1, 1, 196607, 1, 1, 131072, 1, 1, 131073, 1, 1, 131074, 1, 1, 131075, 1, 1, 131076, 1, 1, 131077, 1, 1, 131078, 1, 1, 131079, 1, 1, 131080, 1, 1, 131081, 1, 1, 196601, 1, 1, 196600, 1, 1, 196599, 1, 1, 196598, 1, 1, 131062, 1, 0, 131063, 1, 0, 131064, 1, 0, 131065, 1, 0, 131066, 1, 0, 131067, 1, 0, 131068, 1, 0, 131069, 1, 0, 131070, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65526, 65536, 0, 65527, 65536, 0, 65528, 65536, 0, 65529, 65536, 0, 65530, 65536, 0, 65531, 65536, 0, 65532, 65536, 0, 65533, 65536, 0, -3, 65536, 0, -4, 65536, 0, -5, 65536, 0, -6, 65536, 0, -7, 65536, 0, -8, 65536, 0, -9, 65536, 0, -10, 65536, 0, -11, 65536, 0, -65546, 65536, 0, -65545, 65536, 0, -65544, 65536, 0, -65543, 65536, 0, -65542, 65536, 0, -65541, 65536, 0, -65540, 65536, 0, -65539, 65536, 0, -131075, 65536, 0, -131076, 65536, 0, -131077, 65536, 0, -131078, 65536, 0, -131079, 65536, 0, -131080, 65536, 0, -131081, 65536, 0, -131082, 65536, 0, -196611, 65536, 0, -262146, 65536, 0, -262145, 65536, 0, -327680, 65536, 0, -393216, 65536, 0, -327681, 65536, 0, -327679, 65536, 0, -196610, 65536, 0, -327678, 65536, 0, -262142, 65536, 0, -262141, 65536, 0, -196605, 65536, 0, -131069, 65536, 0, -65533, 65536, 0, 3, 65536, 0, -393215, 65536, 0, -196604, 65536, 0, -196603, 65536, 0, -196602, 65536, 0, -196601, 65536, 0, -131065, 65536, 0, -65529, 65536, 0, 7, 65536, 0, 6, 65536, 0, 5, 65536, 0, 4, 65536, 0, -65532, 65536, 0, -131068, 65536, 0, -131067, 65536, 0, -65531, 65536, 0, -131066, 65536, 0, -65530, 65536, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap"]
+physics_material_override = SubResource("PhysicsMaterial_ahqxp")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(134, -32)
+position = Vector2(-3067, -2282)
 script = ExtResource("2_ahqxp")
 
 [node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(1200, -1159.5)
-scale = Vector2(19.75, 19.11719)
+position = Vector2(116.49997, -142.5)
+scale = Vector2(2.820312, 2.6328123)
 texture = ExtResource("3_86gsx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(1194, -1165)
+position = Vector2(113.8125, -154.125)
 shape = SubResource("RectangleShape2D_h7o3h")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(1182, -1251)
+position = Vector2(116, -134)
+position_smoothing_enabled = true
