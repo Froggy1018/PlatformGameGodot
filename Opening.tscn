@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://bx58qij4e5i87"]
+
+[ext_resource type="Texture2D" uid="uid://bxlfgdta1dphk" path="res://Minecraft-Bricks.jpg" id="1_oiixh"]
+[ext_resource type="Script" uid="uid://vj17xc4uiwu1" path="res://character_body_2d.gd" id="2_ahqxp"]
+[ext_resource type="Texture2D" uid="uid://c1thybwjbre6d" path="res://icon.svg" id="3_86gsx"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hwa81"]
+texture = ExtResource("1_oiixh")
+texture_region_size = Vector2i(1500, 1500)
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_r3fmk"]
+tile_size = Vector2i(1500, 1500)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_hwa81")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7o3h"]
+size = Vector2(2507.5, 2403)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_r3fmk")
+format = 2
+layer_0/tile_data = PackedInt32Array(-196614, 0, 0, -196613, 0, 0, -196612, 0, 0, -196611, 0, 0, -131075, 0, 0, -131076, 0, 0, -131077, 0, 0, -131078, 0, 0, -65542, 0, 0, -65541, 0, 0, -65540, 0, 0, -65539, 0, 0, -65538, 0, 0, -131074, 0, 0, -196610, 0, 0, -6, 0, 0, -5, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -196615, 0, 0, -131079, 0, 0, -65543, 0, 0, -7, 0, 0, -8, 0, 0, -65544, 0, 0, -131080, 0, 0, -196616, 0, 0, -262145, 0, 0, -327681, 0, 0, -393216, 0, 0, -458752, 0, 0, -458751, 0, 0, -458750, 0, 0, -458749, 0, 0, -393213, 0, 0, -393212, 0, 0, -327676, 0, 0, -262139, 0, 0, -196603, 0, 0, -131067, 0, 0, -65531, 0, 0, -262138, 0, 0, -262137, 0, 0, -262136, 0, 0, -196600, 0, 0, -131064, 0, 0, -65528, 0, 0, -65529, 0, 0, -65530, 0, 0, -131066, 0, 0, -196602, 0, 0, -196601, 0, 0, -131065, 0, 0, -262140, 0, 0, -196604, 0, 0, -131068, 0, 0, -65532, 0, 0, -196609, 0, 0, -131073, 0, 0, -65537, 0, 0, -1, 0, 0)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(134, -32)
+script = ExtResource("2_ahqxp")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(1200, -1159.5)
+scale = Vector2(19.75, 19.11719)
+texture = ExtResource("3_86gsx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(1194, -1165)
+shape = SubResource("RectangleShape2D_h7o3h")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(1182, -1251)
