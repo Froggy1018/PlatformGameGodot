@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cisabnu0pwgm4"
-path="res://.godot/imported/wallforgate.png-24f1c3df872e4792a76e5b253b108159.ctex"
+uid="uid://cs48ypihpur8v"
+path="res://.godot/imported/wood.png-23d8a1726cd4b753957d6b0c4c837818.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://wallforgate.png"
-dest_files=["res://.godot/imported/wallforgate.png-24f1c3df872e4792a76e5b253b108159.ctex"]
+source_file="res://blocks/wood.png"
+dest_files=["res://.godot/imported/wood.png-23d8a1726cd4b753957d6b0c4c837818.ctex"]
 
 [params]
 
