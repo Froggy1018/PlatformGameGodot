@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqgw7hq7pg8c8"
-path="res://.godot/imported/pavement.png-507f835a00d5fa76b4d735db6b03cfd1.ctex"
+uid="uid://cs48ypihpur8v"
+path="res://.godot/imported/wood.png-320746db63b5a5eb1bb7f02275994b36.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blocks/pavement.png"
-dest_files=["res://.godot/imported/pavement.png-507f835a00d5fa76b4d735db6b03cfd1.ctex"]
+source_file="res://wood.png"
+dest_files=["res://.godot/imported/wood.png-320746db63b5a5eb1bb7f02275994b36.ctex"]
 
 [params]
 
