@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://d3t840kxfd8da"]
+[gd_scene load_steps=7 format=4 uid="uid://d3t840kxfd8da"]
 
 [ext_resource type="TileSet" uid="uid://b688bjp4s4ia6" path="res://layers.tres" id="1_x6m3a"]
-[ext_resource type="Script" uid="uid://vj17xc4uiwu1" path="res://character_body_2d.gd" id="2_nv845"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_idx68"]
 
@@ -26,11 +25,6 @@ tile_size = Vector2i(128, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hwa81")
 sources/1 = SubResource("TileSetAtlasSource_r3fmk")
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ahqxp"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7o3h"]
-size = Vector2(322.375, 313.75)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-260, -357)
@@ -60,24 +54,3 @@ tile_map_data = PackedByteArray("AADz//v/AQAAAAAAAADz//z/AQAAAAAAAADz//3/AQAAAAA
 tile_set = ExtResource("1_x6m3a")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="Classroom3"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-visible = false
-position = Vector2(-3067, -2282)
-script = ExtResource("2_nv845")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-visible = false
-position = Vector2(116.49997, -142.5)
-scale = Vector2(2.820312, 2.6328123)
-texture = SubResource("CompressedTexture2D_ahqxp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-visible = false
-position = Vector2(113.8125, -154.125)
-shape = SubResource("RectangleShape2D_h7o3h")
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-visible = false
-position = Vector2(116, -134)
-position_smoothing_enabled = true

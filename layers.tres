@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=12 format=3 uid="uid://b688bjp4s4ia6"]
 
-[ext_resource type="Texture2D" path="res://blocks.png" id="1_y8k32"]
-[ext_resource type="Texture2D" path="res://pavement.png" id="2_pemtl"]
-[ext_resource type="Texture2D" path="res://wallforgate.png" id="3_edpnu"]
-[ext_resource type="Texture2D" path="res://wood.png" id="4_edpnu"]
-[ext_resource type="Texture2D" path="res://lockers.png" id="5_7lnea"]
+[ext_resource type="Texture2D" uid="uid://cs7x4a2mp5rp1" path="res://blocks.png" id="1_y8k32"]
+[ext_resource type="Texture2D" uid="uid://dqgw7hq7pg8c8" path="res://pavement.png" id="2_pemtl"]
+[ext_resource type="Texture2D" uid="uid://dr30wb5n5ta0j" path="res://wallforgate.png" id="3_edpnu"]
+[ext_resource type="Texture2D" uid="uid://cs48ypihpur8v" path="res://wood.png" id="4_edpnu"]
+[ext_resource type="Texture2D" uid="uid://c5ew0wentrh5i" path="res://lockers.png" id="5_7lnea"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_httet"]
 resource_name = "floor"
@@ -39,6 +39,8 @@ texture_region_size = Vector2i(125, 146)
 3:0/0 = 0
 3:0/0/texture_origin = Vector2i(0, -37)
 4:0/0 = 0
+4:0/0/texture_origin = Vector2i(0, -37)
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -36.5, 62.5, 0, 0, 36.5, -62.5, 0)
 0:1/0 = 0
 0:1/0/texture_origin = Vector2i(3, 0)
 1:1/0 = 0
@@ -115,8 +117,7 @@ texture_region_size = Vector2i(125, 146)
 tile_shape = 1
 tile_layout = 5
 tile_size = Vector2i(125, 73)
-physics_layer_0/collision_layer = 33554431
-physics_layer_0/collision_mask = 33554431
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_httet")
 sources/1 = SubResource("TileSetAtlasSource_pemtl")
 sources/2 = SubResource("TileSetAtlasSource_7lnea")
